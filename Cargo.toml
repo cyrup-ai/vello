@@ -25,11 +25,11 @@ thiserror = "2.0.16"
 png = "0.18.0"
 
 [dependencies.vello_encoding]
-git = "https://github.com/cyrup-ai/vello"
+git = "https://github.com/cyrup-ai/vello_encoding"
 branch = "main"
 
 [dependencies.vello_shaders]
-git = "https://github.com/cyrup-ai/vello"
+git = "https://github.com/cyrup-ai/vello_shaders"
 branch = "main"
 optional = true
 
