@@ -1,0 +1,62 @@
+[package]
+name = "vello"
+version = "0.5.0"
+description = "A GPU compute-centric 2D renderer."
+categories = [ "rendering", "graphics",]
+keywords = [ "2d", "vector-graphics",]
+edition = "2024"
+rust-version = "1.85.0"
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/linebender/vello"
+
+[features]
+default = [ "wgpu",]
+bump_estimate = [ "vello_encoding/bump_estimate",]
+wgpu = [ "dep:wgpu", "dep:vello_shaders", "dep:futures-intrusive",]
+debug_layers = []
+wgpu-profiler = [ "dep:wgpu-profiler",]
+hot_reload = [ "vello_shaders/compile",]
+
+[dependencies]
+cosmyc-text = { path = "../cosmyc-text" }
+log = "0.4.28"
+static_assertions = "1.1.0"
+thiserror = "2.0.16"
+png = "0.18.0"
+
+[dependencies.vello_encoding]
+path = "../vello_encoding"
+
+[dependencies.vello_shaders]
+path = "../vello_shaders"
+optional = true
+
+[dependencies.bytemuck]
+version = "1.23.2"
+features = [ "derive",]
+
+[dependencies.glyphon]
+path = "../glyphon"
+
+[dependencies.peniko]
+version = "0.4.1"
+default-features = true
+
+[dependencies.wgpu]
+path = "../wgpu/wgpu"
+optional = true
+
+[dependencies.futures-intrusive]
+version = "0.5.0"
+optional = true
+
+[dependencies.wgpu-profiler]
+version = "0.24.0"
+optional = true
+
+
+
+[package.metadata.docs.rs]
+all-features = true
+default-target = "x86_64-unknown-linux-gnu"
+targets = []
