@@ -18,17 +18,19 @@ wgpu-profiler = [ "dep:wgpu-profiler",]
 hot_reload = [ "vello_shaders/compile",]
 
 [dependencies]
-cosmyc-text = { path = "../cosmyc-text" }
+cosmyc-text = { git = "https://github.com/cyrup-ai/cosmyc-text", branch = "main" }
 log = "0.4.28"
 static_assertions = "1.1.0"
 thiserror = "2.0.16"
 png = "0.18.0"
 
 [dependencies.vello_encoding]
-path = "../vello_encoding"
+git = "https://github.com/cyrup-ai/vello"
+branch = "main"
 
 [dependencies.vello_shaders]
-path = "../vello_shaders"
+git = "https://github.com/cyrup-ai/vello"
+branch = "main"
 optional = true
 
 [dependencies.bytemuck]
@@ -36,14 +38,16 @@ version = "1.23.2"
 features = [ "derive",]
 
 [dependencies.glyphon]
-path = "../glyphon"
+git = "https://github.com/cyrup-ai/glyphon"
+branch = "main"
 
 [dependencies.peniko]
 version = "0.4.1"
 default-features = true
 
 [dependencies.wgpu]
-path = "../wgpu/wgpu"
+git = "https://github.com/cyrup-ai/wgpu"
+branch = "main"
 optional = true
 
 [dependencies.futures-intrusive]
